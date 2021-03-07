@@ -1,0 +1,169 @@
+[
+  {
+    "characters": {
+      "ginyu": [
+        {
+          "inputs": "5M 2M 236M 236S(Guldo) 5H 236S(Recoome) 5H 236S(Burtur) 66-Hold sjc jLM SD M 236L S(Jeice) (66 or 44 or jump) DR",
+          "damage": 5712,
+          "position": "Midscreen 1",
+          "title": "Guldo",
+          "video": "JFmpQ9XgZRI",
+          "tips": [
+            "- The <em>5H</em> after Recoome is manually timed (delay or held) for Guldo to disappear when Burtur is called",
+            "- SD on or a fraction after Burtur hits the opponent",
+            "- For the DR, easiest is to land first, then jump. But it's possible to stay the same side in the air with/without an air backdash"
+          ]
+        },
+        {
+          "inputs": "5M 2M 236M 236S(Guldo) 5L 236S(Recoome) j(S/M)H 236S(Burtur) jL-(on the way down) sj M 2H (delay) SD 214S(Jeice + Burtur) LL2H jc LLL 236L DR",
+          "damage": 6168,
+          "position": "Corner 1",
+          "title": "Guldo",
+          "video": "uVg6I2YIOYo",
+          "tips": [
+            "- After Burtur, jump high for the super jump, don't <em>jM</em> too soon. ",
+            "- SD on or a fraction after Burtur hits the opponent",
+            "- Visual cue of success - Ginyu is horizontal on SD hit"
+          ]
+        },
+        {
+          "inputs": "5M 2M 236H 236S(Recoome) 2M 236L 236S(Burtur) 66-Hold 5M jc LL (delay) SD-(on Burtur hit) M 236L S(Jeice) land DR",
+          "damage": 6107,
+          "position": "Midscreen 1",
+          "title": "Recoome",
+          "video": "9GyGlRJm-8s",
+          "tips": [
+            "- SD on or a fraction after Burtur hits the opponent"
+          ]
+        },
+        {
+          "inputs": "5M 2M 236M 236S(Recoome) 5L 236L 236S(Burtur) 5M jc LL2H (delay) SD M 236L S(Jeice) (land) 44 (dash under) DR",
+          "damage": 6087,
+          "position": "Corner 1",
+          "title": "Recoome",
+          "video": "IvjrDItJKj4",
+          "tips": [
+            "- SD on or a fraction after Burtur hits the opponent"
+          ]
+        },
+        {
+          "inputs": "5M 2M 236H 236S(Burtur) 5M jc LL2H SD-(on Burtur hit) jM 236L S(Jeice) (66 or 44 or jump) DR",
+          "damage": 5644,
+          "position": "Midscreen 1",
+          "title": "Burtur",
+          "video": "rgYxUdY8oqY",
+          "tips": [
+            "- SD on or a fraction after Burtur hits the opponent",
+            "- For the DR, easiest is to land first, then jump. But it's possible to stay the same side in the air with/without an air backdash"
+          ]
+        },
+        {
+          "inputs": "2M 5M jc LL 236H 236S(Burtur) (ginyu drifts) LL (delay) LL2H jc 4L4L 236L S(Jeice) (66 or 44 or jump) DR",
+          "damage": 5069,
+          "position": "Midscreen 2",
+          "title": "Burtur",
+          "video": "T36NmJ9G_aE",
+          "tips": [
+            "- Delay after <em>jLL</em> to reset the auto combo, in order to do it again after Burtur hit",
+            "- After <em>j2H</em>, <em>4L 4L</em> is important to not get jM",
+            "- For the DR, easiest is to land first, then jump. But it's possible to stay the same side in the air with/without an air backdash"
+          ]
+        },
+        {
+          "inputs": "5M 2M 236M 236S(Burtur) L M sjc jM 2H SD-(on Burtur hit) 214S(Jeice) LL2H jc LLL 236L DR",
+          "damage": "6147",
+          "position": "Corner 1",
+          "title": "Burtur",
+          "video": "rSyAW8CSLTQ",
+          "tips": [
+            "- Unlike Guldo corner route, no delay between <em>sjc</em> and <em>jM</em>",
+            "- Visual cue of success - Ginyu SD hits at a 45 degree angle"
+          ]
+        },
+        {
+          "inputs": "2M 5M jc LL 236H S(Jeice) S(Guldo) SD LL2H jc LLL",
+          "damage": 4472,
+          "position": "Midscreen 1",
+          "title": "Jeice",
+          "video": "ZnTEacON3xo"
+        },
+        {
+          "inputs": "5M 2M 236M S(Jeice) L jc LL2H jc LLL 236L DR",
+          "damage": 4940,
+          "position": "Corner 1",
+          "title": "Jeice",
+          "video": "Q_yA3pynIIg"
+        },
+        {
+          "inputs": "5M 2M 236M S(Jeice) 5L 236S(Guldo) 5L 236S(Recoome) jMH 236S(Burtur) jL-(on the way down) sj jLM (delay) jc LL S(Jeice) land DR",
+          "damage": 5244,
+          "position": "Corner 2",
+          "title": "Jeice",
+          "video": "cgCQb_Aaddc",
+          "tips": [
+            "- The super jump should be high to retain height for the double <em>jc</em>",
+            "- Delay the <em>jc</em> enough for Burtur to hit while calling Jeice"
+          ]
+        }
+      ],
+      "janemba": [
+        {
+          "inputs": "2M 5M jc (instant)-j2H 2147H-(hold up) jM 2M H-(activate Hell Gate) whiff-5L L 2M 5M 5H S SD-(on fireball hit) jLM jc LL 2H 2M",
+          "damage": "5497",
+          "position": "Corner 1",
+          "title": "Hell Gate H",
+          "video": "9GcPuowfTII"
+        },
+        {
+          "inputs": "2M 5M jc (instant)-j2H 2147H-(hold up) jM S 236L H-(activate Hell Gate) 5LL 2M 5M 5H S SD-(on fireball hit) jLM jc LL 2H 2M",
+          "damage": "5449",
+          "position": "Corner 2",
+          "title": "Hell Gate H",
+          "video": "NXSI3th2whE"
+        }
+      ],
+      "Broly (DBS)": [],
+      "TODs": [
+        {
+          "inputs": "2M 236L spark 236S 2M 5H Trunks 236L LL (delay) 2M jc IAD jM LL 2M 5H jc LL-(one hit) 2H jc LL H Janemba DR Trunks 236S LVL1 LVL1 LVL3",
+          "position": "Corner",
+          "title": "Bardock B / Trunks B / Janemba C - 1 Bar start",
+          "video": "0yScBhYBC5c",
+          "tips": [
+            "- <em>2M 5H Trunks 236L</em> time it to do two things: Bardock can follow up after lariat, opponent is low enough for LL",
+            "- Bardock spark loop tip: delay the 2M after LL to help land jM after IAD"
+          ]
+        },
+        {
+          "inputs": "2M 214L spark 66 6H 5H 2S dash M 5H 2S dash M 5H jc j.MS dash S SD LLL Bardock land 214M vanish hold DR LVL1 LVL1 LVL3",
+          "position": "Corner",
+          "title": "Cell / Bardock B / 17 A - 2 Bar start",
+          "video": "qgHIawTDq0o",
+          "tips": [
+            "- Cell 2S loop tip: IAD cancel on the second hit of 2S, delay 5H"
+          ]
+        },
+        {
+          "inputs": "2M 214L spark 66 6M 214L Bardock 5H 2S dash M 5H 2S dash M 5H jc jMLL jc LLL Black land 214M vanish on second hit DR Bardock 214S LVL1 LVL1 LVL3",
+          "position": "Mid screen",
+          "title": "Cell / Bardock B / Black A - 3 Bar start",
+          "video": "3QAzr9cC8Zk",
+          "tips": [
+            "- Cell 2S loop tip: IAD cancel on the second hit of 2S, delay 5H",
+            "- <em>214M vanish on second hit</em>: wait for opponent to hit the ground before vanish",
+            "- after DR, call Bardock ASAP <em>and</em> perform 214S, otherwise opponent will drop"
+          ]
+        },
+        {
+          "inputs": "2M 236L spark 2M 2H 236L Goku 2M 2H jc jMLL jc jLL 2H S 236L Broly 2M 2H 214S Goku jS land 214M vanish DR LVL1 LVL1 LVL3",
+          "position": "Corner",
+          "title": "Baby / SSJ Goku / SBroly - 3 Bar start",
+          "video": "iMby13Qmrss",
+          "tips": [
+            "- <em>214S Goku</em>: call Goku as the spin ends to keep hitstun"
+          ]
+        }
+      ]
+    }
+  }
+]
