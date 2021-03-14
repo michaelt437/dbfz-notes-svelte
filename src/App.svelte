@@ -21,7 +21,6 @@
 </main>
 
 <style lang="scss" global>
-	@import '../node_modules/bulma/css/bulma.min';
 	@import '../node_modules/@fortawesome/fontawesome-free/css/all.min';
 
 	main {
