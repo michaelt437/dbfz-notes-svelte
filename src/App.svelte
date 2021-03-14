@@ -20,9 +20,9 @@
 	<TheFooter />
 </main>
 
-<style lang="scss">
-	@import 'bulma/css/bulma.min.css';
-	@import '@fortawesome/fontawesome-free/css/all.css';
+<style lang="scss" global>
+	@import '../node_modules/bulma/css/bulma.min';
+	@import '../node_modules/@fortawesome/fontawesome-free/css/all.min';
 
 	main {
 		display: flex;
