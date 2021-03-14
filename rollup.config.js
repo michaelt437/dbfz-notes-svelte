@@ -45,6 +45,7 @@ export default {
 			preprocess: sveltePreprocess({ 
 				sourceMap: !production,
 				postcss: true,
+				emitCss: true,
 				scss: { includePaths: ['src', 'node_modules' ]}, 
 				css: { includePaths: ['src', 'node_modules' ]} 
 			}),
