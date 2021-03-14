@@ -48,22 +48,22 @@ let open = false;
   .box {
     cursor: pointer;
 
-    .inputs {
-      font-family: 'Consolas', Courier, monospace;
-      cursor: text;
-    }
+  }
+  .box .inputs {
+    font-family: 'Consolas', Courier, monospace;
+    cursor: text;
+  }
 
-    .tips {
-      cursor: text;
-    }
+  .box .tips {
+    cursor: text;
+  }
 
-    iframe {
-      @media(max-width: 768px) {
-        height: 250px;
-      }
-      @media(min-width: 767px) {
-        height: 400px;
-      }
+  .box iframe {
+    @media(max-width: 768px) {
+      height: 250px;
+    }
+    @media(min-width: 767px) {
+      height: 400px;
     }
   }
 
