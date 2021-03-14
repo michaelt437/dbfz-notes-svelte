@@ -21,7 +21,7 @@
 </main>
 
 <style>
-	@import '../node_modules/@fortawesome/fontawesome-free/css/all.min';
+	@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
 	main {
 		display: flex;
