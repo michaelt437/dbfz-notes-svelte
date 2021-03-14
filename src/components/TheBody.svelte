@@ -5,7 +5,7 @@
 </script>
 
 <div class="column is-four-fifths">
-  <h1 class="is-size-3 is-uppercase mb-4">{$character}</h1>
+  <h1 class="is-size-4 is-capitalized mb-5">{$character}</h1>
   {#if $currentChar.length}
     {#each $currentChar as combo}
       <Card combo={combo} />

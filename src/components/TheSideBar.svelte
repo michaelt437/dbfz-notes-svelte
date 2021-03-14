@@ -1,23 +1,21 @@
 <script lang="ts">
-  import { character } from "../store";
-  let items: string[] = [
-    "Bardock",
-    "Broly (DBS)",
-    "Ginyu",
-    "Janemba",
-    "TODs"
-  ];
+  import { createEventDispatcher } from "svelte";
+  import { character, roster } from "../store";
+  let dipatch = createEventDispatcher();
+
+  export let openSidebar: boolean;
   function setCharacter (newCharacter: string) {
     $character = newCharacter;
+    if (openSidebar) {
+      dipatch("triggerMenu");
+    }
   }
-  console.log($character)
 </script>
-
-<div class="column">
+<div class="column { openSidebar ? 'open' : ''}">
   <aside class="menu">
     <p class="menu-label">Characters</p>
-    <ul class="menu-list">
-    {#each items as item}
+    <ul class="menu-list is-capitalized">
+    {#each roster as item}
       <li class="{item.toLowerCase() === $character.toLowerCase() ? 'active has-text-primary' : ''}" on:click={() => setCharacter(item)}>{item}</li>
     {/each}
     </ul>
@@ -41,7 +39,22 @@
       }
 
       &:hover {
-        background-color: #f0f4f2;
+        color: #00d1b2;
+      }
+    }
+  }
+
+  @media(max-width: 768px) {
+    .column {
+      position: absolute;
+      transform: translate(-110%, -2.5%);
+      height: 100vh;
+      transition: transform .3s ease-in;
+      background-color: white;
+      width: 200px;
+
+      &.open {
+        transform: translate(-6%, -2.5%);
       }
     }
   }

@@ -8,7 +8,7 @@ let open = false;
   <div class="box-header level mb-5">
     <h5 class="title is-5 level-left mb-0"># {combo.title} - {combo.position}</h5>
     {#if combo.damage}
-      <p class="level-right mb-0">
+      <p class="level-right mb-0 is-hidden-mobile">
         Damage: <span class="has-text-primary ml-1">{combo.damage}</span>
       </p>
     {/if}
@@ -29,7 +29,7 @@ let open = false;
             </ul>
           </div>
         {/if}
-        <iframe title="" class="mb-2" width="100%" height="500" src="https://www.youtube.com/embed/{combo.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe title="" class="mb-2" width="100%" src="https://www.youtube.com/embed/{combo.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     {/if}
     {#if combo.video}
@@ -49,12 +49,21 @@ let open = false;
     cursor: pointer;
 
     .inputs {
-      // font-family: 'Consolas', Courier, monospace;
+      font-family: 'Consolas', Courier, monospace;
       cursor: text;
     }
 
     .tips {
       cursor: text;
+    }
+
+    iframe {
+      @media(max-width: 768px) {
+        height: 250px;
+      }
+      @media(min-width: 767px) {
+        height: 400px;
+      }
     }
   }
 

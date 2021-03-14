@@ -1,5 +1,7 @@
 {
   "characters": {
+    "bardock": [],
+    "broly (dbs)": [],
     "ginyu": [
       {
         "inputs": "5M 2M 236M 236S(Guldo) 5H 236S(Recoome) 5H 236S(Burtur) 66-Hold sjc jLM SD M 236L S(Jeice) (66 or 44 or jump) DR",
@@ -121,8 +123,7 @@
         "video": "NXSI3th2whE"
       }
     ],
-    "broly (dbs)": [],
-    "bardock": [],
+    "ssj4 gogeta": [],
     "tods": [
       {
         "inputs": "2M 236L spark 236S 2M 5H Trunks 236L LL (delay) 2M jc IAD jM LL 2M 5H jc LL-(one hit) 2H jc LL H Janemba DR Trunks 236S LVL1 LVL1 LVL3",
@@ -161,6 +162,15 @@
         "video": "iMby13Qmrss",
         "tips": [
           "- <em>214S Goku</em>: call Goku as the spin ends to keep hitstun"
+        ]
+      },
+      {
+        "inputs": "2M 5M 22S spark 2M 5M jc jML 2H DR M H vanish hold M (delay) H S dash M (delay) H S dash M (delay) H S 214L Bardock 236H (or j246H) vanish DR 236M LVL1 LVL1 LVL3",
+        "position": "In Corner",
+        "title": "SSJ4 Gogeta / Baby / Bardock - 5.5 bar",
+        "video": "POV6iqylCGw",
+        "tips": [
+          "- <em>214L Bardock</em>: Bardock call really quick after 214L, almost plink timing or same time"
         ]
       }
     ]
