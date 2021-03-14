@@ -5,7 +5,7 @@
   <p>In progress...</p>
 </div>
 
-<style lang="scss">
+<style>
   .emptybox {
     padding: 7rem;
     border-radius: 3px;

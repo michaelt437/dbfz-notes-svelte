@@ -20,7 +20,7 @@
 	<TheFooter />
 </main>
 
-<style lang="scss" global>
+<style>
 	@import '../node_modules/@fortawesome/fontawesome-free/css/all.min';
 
 	main {
@@ -30,8 +30,8 @@
 		height: 100%;
 		background-color: #f5f5f5;
 
-		.main-content {
-			background-color: inherit;
-		}
+	}
+	main .main-content {
+		background-color: inherit;
 	}
 </style>

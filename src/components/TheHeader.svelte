@@ -17,17 +17,19 @@
   <h1 class="is-size-2">DBFZ</h1>
 </nav>
 
-<style lang="scss">
+<style>
   .navbar {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #d9d9d9;
-
-    .icon {
-      cursor: pointer;
-    }
-    
-    @media(max-width: 768px) {
+  }
+  
+  .navbar .icon {
+    cursor: pointer;
+  }
+  
+  @media(max-width: 768px) {
+    .navbar {
       display: flex;
       justify-content: start;
       align-items: center;

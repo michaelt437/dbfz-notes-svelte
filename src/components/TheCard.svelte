@@ -44,7 +44,7 @@ let open = false;
   </div>
 </div>
 
-<style lang="scss">
+<style>
   .box {
     cursor: pointer;
 
@@ -58,11 +58,14 @@ let open = false;
     cursor: text;
   }
 
-  .box iframe {
-    @media(max-width: 768px) {
+  @media(max-width: 768px) {
+    .box iframe {
       height: 250px;
     }
-    @media(min-width: 767px) {
+  }
+
+  @media(min-width: 767px) {
+    .box iframe {
       height: 400px;
     }
   }
