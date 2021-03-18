@@ -1,7 +1,24 @@
 {
   "characters": {
     "bardock": [],
-    "broly (dbs)": [],
+    "broly (dbs)": [
+      {
+        "inputs": "2M 5M 236M assist 1 j.S SD LM jc LL 23M assist 2 jLL 2H SD 236L lvl 1",
+        "damage": 5657,
+        "position": "Midscreen 1",
+        "title": "Broly (Dbs)",
+        "video": "TbTkqPF8xfo",
+        "tips": []
+      },
+      {
+        "inputs": "2M 5M 236M 2M 5M jc LM jc LM S SD LM S 236M assist 1 jLL 2H S 236L assist 2 214M 214S lvl 1 lvl 2",
+        "damage": 7346,
+        "position": "Corner 1",
+        "title": "Broly (Dbs)",
+        "video": "yxXCP1E7sh0",
+        "tips": []
+      }
+    ],
     "ginyu": [
       {
         "inputs": "5M 2M 236M 236S(Guldo) 5H 236S(Recoome) 5H 236S(Burtur) 66-Hold sjc jLM SD M 236L S(Jeice) (66 or 44 or jump) DR",

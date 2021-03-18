@@ -19,7 +19,7 @@ let open = false;
     </div>
     {#if open}
       <div class="details">
-        {#if combo.tips}
+        {#if combo.tips && combo.tips.length}
           <div class="mb-4 p-5 has-background-info-light tips" on:click|stopPropagation={null}>
             Tips:
             <ul>
