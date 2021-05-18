@@ -1,10 +1,11 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
-  import { character, roster } from "../store";
+  import { roster, character } from "../store";
   let dipatch = createEventDispatcher();
 
   export let openSidebar: boolean;
-  function setCharacter (newCharacter: string) {
+
+  function setCharacter (newCharacter) {
     $character = newCharacter;
     if (openSidebar) {
       dipatch("triggerMenu");
@@ -12,14 +13,17 @@
   }
 </script>
 <div class="column { openSidebar ? 'open' : ''}">
-  <aside class="menu">
+  <aside class="menu mb-6">
     <p class="menu-label">Characters</p>
     <ul class="menu-list is-capitalized">
-    {#each roster as item}
-      <li class="{item.toLowerCase() === $character.toLowerCase() ? 'active has-text-primary' : ''}" on:click={() => setCharacter(item)}>{item}</li>
+    {#each $roster as item}
+      <li class="{item.name.toLowerCase() === $character.name.toLowerCase() ? 'active has-text-primary' : ''}" on:click={() => setCharacter(item)}>{item.name}</li>
     {/each}
     </ul>
   </aside>
+  <button class="button is-primary is-outlined">
+    <i class="fas fa-plus-circle mr-3"></i> Add a Combo
+  </button>
 </div>
 
 <style>
