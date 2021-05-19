@@ -1,9 +1,17 @@
 <script lang="ts">
+  import { createEventDispatcher } from  "svelte";
   import { component_subscribe } from "svelte/internal";
   import type { Combo } from "../types";
   export let combo: Combo;
   let actionsMenu = false;
   let tipsOpen = false;
+  const dispatch = createEventDispatcher();
+
+  function invokeModal () {
+    console.log("calling invokeModal from the card")
+    dispatch("message");
+  }
+
 </script>
 
 <svelte:body on:click={() => actionsMenu = false} />
@@ -41,7 +49,7 @@
     {#if combo.tips}
       <button class="button is-primary" on:click={() => tipsOpen = !tipsOpen}>{tipsOpen ? "Hide Tips" : "Show Tips"}</button>
     {/if}
-    <button class="button is-light has-text-grey-light" on:click|stopPropagation={() => actionsMenu = !actionsMenu}><i class="fas fa-edit"></i></button>
+    <button class="button is-light has-text-grey-light" on:click|stopPropagation={invokeModal}><i class="fas fa-edit"></i></button>
   </div>
 </div>
 

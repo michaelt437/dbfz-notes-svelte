@@ -5,10 +5,12 @@
 	import Sidebar from "./components/TheSideBar.svelte";
 	import TheBody from "./components/TheBody.svelte";
 	import TheFooter from "./components/TheFooter.svelte";
+	import TheModal from "./components/TheModal.svelte";
   import { roster, character } from "./store";
 	import type { Character } from "./types";
 
 	let openSidebar: boolean = false;
+	let openModal: boolean = false;
 
 	function fetchCharacters (): Promise<void> {
 		return new Promise ((resolve, reject) => {
@@ -27,6 +29,10 @@
 		})
 	}
 
+	function invokeModal () {
+		openModal = true;
+	}
+
 	onMount (async () => {
 		await fetchCharacters();
 	})
@@ -38,11 +44,12 @@
 		<div class="container is-max-widescreen px-5 pb-5 pt-3">
 			<div class="columns">
 				<Sidebar on:triggerMenu={() => openSidebar = !openSidebar } {openSidebar} />
-				<TheBody />
+				<TheBody on:message={invokeModal} />
 			</div>
 		</div>
 	</div>
 	<TheFooter />
+	<TheModal openModal />
 </main>
 
 <style>
@@ -54,7 +61,7 @@
 		justify-content: space-between;
 		height: 100%;
 		background-color: #f5f5f5;
-
+		position: relative;
 	}
 	main .main-content {
 		background-color: inherit;

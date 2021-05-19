@@ -13,17 +13,17 @@
   }
 </script>
 <div class="column { openSidebar ? 'open' : ''}">
-  <aside class="menu mb-6">
+  <aside class="menu">
     <p class="menu-label">Characters</p>
     <ul class="menu-list is-capitalized">
     {#each $roster as item}
       <li class="{item.name.toLowerCase() === $character.name.toLowerCase() ? 'active has-text-primary' : ''}" on:click={() => setCharacter(item)}>{item.name}</li>
     {/each}
     </ul>
+    <button class="button is-primary is-outlined mt-6">
+      <i class="fas fa-plus-circle mr-3"></i> Add a Combo
+    </button>
   </aside>
-  <button class="button is-primary is-outlined">
-    <i class="fas fa-plus-circle mr-3"></i> Add a Combo
-  </button>
 </div>
 
 <style>
