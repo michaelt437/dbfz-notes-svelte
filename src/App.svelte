@@ -30,6 +30,7 @@
 	}
 
 	function invokeModal () {
+		console.log("fired?")
 		openModal = true;
 	}
 
@@ -49,7 +50,7 @@
 		</div>
 	</div>
 	<TheFooter />
-	<TheModal openModal />
+	<TheModal {openModal} on:closeModal={() => openModal = false} />
 </main>
 
 <style>

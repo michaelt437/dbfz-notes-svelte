@@ -1,6 +1,5 @@
 <script lang="ts">
   import { createEventDispatcher } from  "svelte";
-  import { component_subscribe } from "svelte/internal";
   import type { Combo } from "../types";
   export let combo: Combo;
   let actionsMenu = false;
@@ -8,7 +7,6 @@
   const dispatch = createEventDispatcher();
 
   function invokeModal () {
-    console.log("calling invokeModal from the card")
     dispatch("message");
   }
 
@@ -39,7 +37,7 @@
         Tips
         <ul>
         {#each combo.tips as tip}
-          <li style="list-style-type: disc; list-style-position: inside;">{@html tip}</li>
+          <li style="list-style-type: '⭐'; list-style-position: inside;">{@html tip}</li>
         {/each}
         </ul>
       </div>
