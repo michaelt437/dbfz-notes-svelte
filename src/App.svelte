@@ -5,12 +5,13 @@
 	import Sidebar from "./components/TheSideBar.svelte";
 	import TheBody from "./components/TheBody.svelte";
 	import TheFooter from "./components/TheFooter.svelte";
-	import TheModal from "./components/TheModal.svelte";
+	import TheAddModal from "./components/TheAddModal.svelte";
+	import TheEditModal from "./components/TheEditModal.svelte";
   import { roster, character } from "./store";
-	import type { Character } from "./types";
 
 	let openSidebar: boolean = false;
-	let openModal: boolean = false;
+	let openEditModal: boolean = false;
+	let openAddModal: boolean = false;
 
 	function fetchCharacters (): Promise<void> {
 		return new Promise ((resolve, reject) => {
@@ -29,9 +30,13 @@
 		})
 	}
 
-	function invokeModal () {
-		console.log("fired?")
-		openModal = true;
+	let ss = $character
+
+	function invokeEditModal () {
+		openEditModal = true;
+	}
+	function invokeAddModal () {
+		openAddModal = true;
 	}
 
 	onMount (async () => {
@@ -44,13 +49,14 @@
 		<TheHeader on:triggerMenu={() => openSidebar = !openSidebar} {openSidebar} />
 		<div class="container is-max-widescreen px-5 pb-5 pt-3">
 			<div class="columns">
-				<Sidebar on:triggerMenu={() => openSidebar = !openSidebar } {openSidebar} />
-				<TheBody on:message={invokeModal} />
+				<Sidebar on:openAddModal={invokeAddModal} on:triggerMenu={() => openSidebar = !openSidebar } {openSidebar} />
+				<TheBody on:openEditModal={invokeEditModal} />
 			</div>
 		</div>
 	</div>
 	<TheFooter />
-	<TheModal {openModal} on:closeModal={() => openModal = false} />
+	<TheAddModal {openAddModal} on:closeModal={() => openAddModal = false}/>
+	<TheEditModal {openEditModal} on:closeModal={() => openEditModal = false} />
 </main>
 
 <style>

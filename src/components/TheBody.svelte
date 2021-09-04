@@ -33,7 +33,7 @@
   <h1 class="is-size-4 is-capitalized mb-5">{$character.name}</h1>
   {#if comboRoutes.length}
     {#each comboRoutes as combo}
-      <Card combo={combo} on:message />
+      <Card combo={combo} on:openEditModal />
     {/each}
   {:else}
     <Empty />

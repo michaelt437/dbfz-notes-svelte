@@ -1,15 +1,19 @@
 <script lang="ts">
   import { createEventDispatcher } from "svelte";
   import { roster, character } from "../store";
-  let dipatch = createEventDispatcher();
+  let dispatch = createEventDispatcher();
 
   export let openSidebar: boolean;
 
   function setCharacter (newCharacter) {
     $character = newCharacter;
     if (openSidebar) {
-      dipatch("triggerMenu");
+      dispatch("triggerMenu");
     }
+  }
+
+  function invokeModal () {
+    dispatch("openAddModal");
   }
 </script>
 <div class="column { openSidebar ? 'open' : ''}">
@@ -20,7 +24,7 @@
       <li class="{item.name.toLowerCase() === $character.name.toLowerCase() ? 'active has-text-primary' : ''}" on:click={() => setCharacter(item)}>{item.name}</li>
     {/each}
     </ul>
-    <button class="button is-primary is-outlined mt-6">
+    <button class="button is-primary is-outlined mt-6" on:click={invokeModal}>
       <i class="fas fa-plus-circle mr-3"></i> Add a Combo
     </button>
   </aside>

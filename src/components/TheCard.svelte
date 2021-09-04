@@ -7,7 +7,7 @@
   const dispatch = createEventDispatcher();
 
   function invokeModal () {
-    dispatch("message");
+    dispatch("openEditModal");
   }
 
 </script>
