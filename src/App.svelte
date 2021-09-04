@@ -30,8 +30,6 @@
 		})
 	}
 
-	let ss = $character
-
 	function invokeEditModal () {
 		openEditModal = true;
 	}
@@ -48,8 +46,7 @@
 	<div class="main-content">
 		<TheHeader on:triggerMenu={() => openSidebar = !openSidebar} {openSidebar} />
 		<div class="container is-max-widescreen px-5 pb-5 pt-3">
-			<div class="columns">
-				<Sidebar on:openAddModal={invokeAddModal} on:triggerMenu={() => openSidebar = !openSidebar } {openSidebar} />
+			<div class="columns" style="justify-content: center;">
 				<TheBody on:openEditModal={invokeEditModal} />
 			</div>
 		</div>

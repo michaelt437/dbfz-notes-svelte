@@ -15,13 +15,14 @@
 <svelte:body on:click={() => actionsMenu = false} />
 <div class="box">
   <div class="box-header level mb-5">
-    <h5 class="title is-5 level-left mb-0"># {combo.title} - {combo.position}</h5>
+    <h5 class="title is-5 level-left mb-0"># {combo.title}</h5>
     <p class="level-right mb-0 is-hidden-mobile">
-    {#if combo.damage}
-      Damage: <span class="has-text-primary ml-1">{combo.damage}</span>
-    {/if}
-    {#if combo.tod}
-      <span class="has-text-primary">TOD</span>
+    {#if combo.tags}
+      <div class="tags">
+        {#each combo.tags as tag}
+          <span class="tag is-info is-light">{tag.toLowerCase()}</span>
+        {/each}
+      </div>
     {/if}
     </p>
   </div>
@@ -44,7 +45,7 @@
     {/if}
   </div>
   <div class="box-footer">
-    {#if combo.tips}
+    {#if combo.tips.length}
       <button class="button is-primary" on:click={() => tipsOpen = !tipsOpen}>{tipsOpen ? "Hide Tips" : "Show Tips"}</button>
     {/if}
     <button class="button is-light has-text-grey-light" on:click|stopPropagation={invokeModal}><i class="fas fa-edit"></i></button>
