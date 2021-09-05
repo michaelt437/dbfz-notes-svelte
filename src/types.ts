@@ -4,8 +4,9 @@ export type Combo = {
   video: string;
   tags: string[];
   tod: boolean;
+  date: string;
   damage?: number;
-  tips?: string[];
+  tips: string[];
 };
 
 export type Character = {

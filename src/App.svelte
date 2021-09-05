@@ -47,7 +47,7 @@
 		<TheHeader on:triggerMenu={() => openSidebar = !openSidebar} {openSidebar} />
 		<div class="container is-max-widescreen px-5 pb-5 pt-3">
 			<div class="columns" style="justify-content: center;">
-				<TheBody on:openEditModal={invokeEditModal} />
+				<TheBody on:openEditModal={invokeEditModal} on:openAddModal={invokeAddModal} />
 			</div>
 		</div>
 	</div>
