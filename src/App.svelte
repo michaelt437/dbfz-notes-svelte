@@ -52,8 +52,12 @@
 		</div>
 	</div>
 	<TheFooter />
-	<TheAddModal {openAddModal} on:closeModal={() => openAddModal = false}/>
-	<TheEditModal {openEditModal} on:closeModal={() => openEditModal = false} />
+	{#if openAddModal}
+		<TheAddModal {openAddModal} on:closeModal={() => openAddModal = false}/>
+	{/if}
+	{#if openEditModal}
+		<TheEditModal {openEditModal} on:closeModal={() => openEditModal = false} />
+	{/if}
 </main>
 
 <style>

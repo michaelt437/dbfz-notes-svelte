@@ -11,18 +11,21 @@ let comboRoutes: Combo[] = [];
 let search: string = "";
 
 
-async function fetchRoutes (): Promise<void> {
+async function fetchRoutes (): Promise<any> {
   comboRoutes = [];
   return await db.collection("routes")
-  .get()
-  .then(querySnapshot => {
-    querySnapshot.forEach(route => {
-      let _comboRoutes = [...comboRoutes, route.data() as Combo].sort((a, b) => {
-        if (a.date > b.date) return -1;
-        else if (a.date < b.date) return 1;
-        else return 0;
-      });
-      comboRoutes = _comboRoutes;
+  .onSnapshot({includeMetadataChanges: true}, querySnapshot => {
+    querySnapshot.docChanges().forEach(route => {
+      if (route.type === "added") {
+        const _route = route.doc.data();
+        _route.id = route.doc.id;
+        let _comboRoutes = [...comboRoutes, _route as Combo].sort((a, b) => {
+          if (a.date > b.date) return -1;
+          else if (a.date < b.date) return 1;
+          else return 0;
+        });
+        comboRoutes = _comboRoutes;
+      }
     })
   })
 }
@@ -42,7 +45,6 @@ onMount(() => {
 </script>
 
 <div class="column is-four-fifths">
-  <h1 class="is-size-4 is-capitalized mb-2">Routes</h1>
   <div class="is-flex is-justify-content-space-between is-align-items-center">
     <input class="input is-normal  my-3" type="text" placeholder="Search..." bind:value={search} />
   </div>

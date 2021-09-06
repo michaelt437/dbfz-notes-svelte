@@ -1,12 +1,20 @@
 <script lang="ts">
   import { createEventDispatcher } from  "svelte";
+  import { selectedCombo } from "../store";
   import type { Combo } from "../types";
   export let combo: Combo;
   let actionsMenu = false;
   let tipsOpen = false;
   const dispatch = createEventDispatcher();
+  
+  function editComboRoute (): void {
+    selectedCombo.update(() => {
+      return {...combo};
+    });
+  }
 
   function invokeModal () {
+    editComboRoute();
     dispatch("openEditModal");
   }
 
