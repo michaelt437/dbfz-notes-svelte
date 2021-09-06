@@ -1,6 +1,6 @@
 <script lang="typescript">
 import { createEventDispatcher } from "svelte";
-import db from "../firebase";
+import { db } from "../firebase";
 import type { Combo } from "../types";
 export let openAddModal;
 

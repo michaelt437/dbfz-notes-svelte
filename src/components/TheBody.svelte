@@ -1,7 +1,7 @@
 <script lang="ts">
 import { onMount, createEventDispatcher } from "svelte";
-import db from "../firebase";
-import { character } from "../store";
+import { db } from "../firebase";
+import { character, user } from "../store";
 import type { Combo } from "../types";
 import Card from "./TheCard.svelte";
 import Empty from "./TheEmptyState.svelte";
@@ -47,6 +47,11 @@ onMount(() => {
 <div class="column is-four-fifths">
   <div class="is-flex is-justify-content-space-between is-align-items-center">
     <input class="input is-normal  my-3" type="text" placeholder="Search..." bind:value={search} />
+    {#if $user}
+      <button class="button is-info ml-2" on:click={invokeModal}>
+        <i class="fas fa-plus-circle mr-2"></i> Add Route
+      </button>
+    {/if}
   </div>
   {#if filteredRoutes.length}
     {#each filteredRoutes as combo}

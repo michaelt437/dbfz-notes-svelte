@@ -1,6 +1,6 @@
 <script lang="typescript">
   import { createEventDispatcher, onMount } from "svelte";
-import db from "../firebase";
+  import { db } from "../firebase";
   import { selectedCombo } from "../store";
   export let openEditModal;
   const dispatch = createEventDispatcher();

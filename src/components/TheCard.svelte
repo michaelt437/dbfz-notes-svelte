@@ -1,6 +1,6 @@
 <script lang="ts">
   import { createEventDispatcher } from  "svelte";
-  import { selectedCombo } from "../store";
+  import { selectedCombo, user } from "../store";
   import type { Combo } from "../types";
   export let combo: Combo;
   let actionsMenu = false;
@@ -56,7 +56,9 @@
     {#if combo.tips.length}
       <button class="button is-primary is-light" on:click={() => tipsOpen = !tipsOpen}>{tipsOpen ? "Hide Tips" : "Show Tips"}</button>
     {/if}
-    <button class="button is-light has-text-grey-light" on:click|stopPropagation={invokeModal}><i class="fas fa-edit"></i></button>
+    {#if $user}
+      <button class="button is-light has-text-grey-light" on:click|stopPropagation={invokeModal}><i class="fas fa-edit"></i></button>
+    {/if}
   </div>
 </div>
 

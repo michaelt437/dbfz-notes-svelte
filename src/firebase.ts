@@ -1,8 +1,9 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/auth";
 
 var firebaseConfig = {
-	apiKey: "AIzaSyCOzgYzAMeBNtT-h8Z971zlakx8qb_3iGQ",
+  apiKey: "AIzaSyCOzgYzAMeBNtT-h8Z971zlakx8qb_3iGQ",
   authDomain: "dbfz-notes.firebaseapp.com",
   projectId: "dbfz-notes",
   storageBucket: "dbfz-notes.appspot.com",
@@ -13,6 +14,8 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-const  db = firebase.firestore();
+const db = firebase.firestore();
+const fb = firebase;
+const auth = firebase.auth;
 
-export default db;
+export { db, fb, auth };

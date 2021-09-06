@@ -1,6 +1,6 @@
 <script lang="typescript">
 	import { onMount } from "svelte";
-	import db from "./firebase";
+	import { db } from "./firebase";
 	import TheHeader from "./components/TheHeader.svelte";
 	import Sidebar from "./components/TheSideBar.svelte";
 	import TheBody from "./components/TheBody.svelte";
