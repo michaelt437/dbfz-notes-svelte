@@ -54,7 +54,7 @@
   </div>
   <div class="box-footer">
     {#if combo.tips.length}
-      <button class="button is-primary" on:click={() => tipsOpen = !tipsOpen}>{tipsOpen ? "Hide Tips" : "Show Tips"}</button>
+      <button class="button is-primary is-light" on:click={() => tipsOpen = !tipsOpen}>{tipsOpen ? "Hide Tips" : "Show Tips"}</button>
     {/if}
     <button class="button is-light has-text-grey-light" on:click|stopPropagation={invokeModal}><i class="fas fa-edit"></i></button>
   </div>
