@@ -37,6 +37,12 @@
     <i class="{openSidebar ? 'fas fa-times' : 'fas fa-bars'}"></i>
   </span>
   <h1 class="is-size-2">DBFZ</h1>
+  {#if $user}
+    <button class="button is-link is-light" on:click={logout}>Log Out</button>
+  {/if}
+  {#if !$user}
+    <button class="button is-link is-light" on:click={login}>Login</button>
+  {/if}
 </nav>
 
 <style>
