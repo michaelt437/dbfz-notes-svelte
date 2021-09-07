@@ -30,7 +30,7 @@ async function saveChanges (): Promise<void> {
       date: new Date().valueOf(),
       inputs: newRoute.inputs,
       tags: newTags,
-      tips: newRoute.tips,
+      tips: newRoute.tips.filter(tip => tip.trim() !== ""),
       title: newRoute.title,
       tod: false,
       video: newRoute.video
@@ -41,7 +41,6 @@ async function saveChanges (): Promise<void> {
 function resetValues (): void {
   newRoute.title = "";
   newRoute.inputs =  "";
-  // newRoute.tags =  [];
   rawTags = "";
   newRoute.tips =  [];
   newRoute.title =  "";
@@ -51,6 +50,11 @@ function resetValues (): void {
 
 function addTip (): void {
   newRoute.tips = [...newRoute.tips, ""];
+}
+
+function deleteTip (index: number): void {
+  newRoute.tips.splice(index, 1);
+  newRoute.tips = newRoute.tips;
 }
 
 </script>
@@ -77,15 +81,15 @@ function addTip (): void {
       <div class="field">
         <div class="is-flex is-align-items-center mb-2">
           <label for="route-tips" class="label mb-0 mr-2">Tips</label>
-          <span class="icon" on:click={addTip}>
+          <span class="icon" on:click={addTip} title="Add tip">
             <i class="fas fa-plus-circle"></i>
           </span>
         </div>
-        {#each newRoute.tips as tip, index}
+        {#each newRoute.tips as _, index}
           <div class="control mb-2">
             <div class="is-flex is-align-items-center">
               <input type="text" class="input" placeholder="Route tip" bind:value={newRoute.tips[index]} />
-              <span class="icon">
+              <span class="icon" on:click={() => deleteTip(index)} title="Remove tip">
                 <i class="fas fa-times"></i>
               </span>
             </div>

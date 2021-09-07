@@ -28,6 +28,7 @@
       .doc(editingRoute.id)
       .set({
         ...editingRoute,
+        tips: editingRoute.tips.filter(tip => tip.trim() !== ""),
         tags: editingTags
       });
     closeModal();
@@ -56,15 +57,15 @@
       <div class="field">
         <div class="is-flex is-align-items-center mb-2">
           <label for="route-tips" class="label mb-0 mr-2">Tips</label>
-          <span class="icon" on:click={addTip}>
+          <span class="icon" on:click={addTip} title="Add tip">
             <i class="fas fa-plus-circle"></i>
           </span>
         </div>
-        {#each editingRoute.tips as tip, index}
+        {#each editingRoute.tips as _, index}
           <div class="control mb-2">
             <div class="is-flex is-align-items-center">
               <input type="text" class="input" placeholder="Route tip" bind:value={editingRoute.tips[index]} />
-              <span class="icon" on:click={() => deleteTip(index)}>
+              <span class="icon" on:click={() => deleteTip(index)} title="Remove tip">
                 <i class="fas fa-times"></i>
               </span>
             </div>
