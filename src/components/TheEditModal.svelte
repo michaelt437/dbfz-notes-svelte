@@ -1,7 +1,7 @@
 <script lang="typescript">
   import { createEventDispatcher, onMount } from "svelte";
   import { db } from "../firebase";
-  import { selectedCombo } from "../store";
+  import { selectedCombo, user } from "../store";
   export let openEditModal;
   const dispatch = createEventDispatcher();
 
@@ -77,12 +77,14 @@
           <input id="route-tags" type="text" class="input" placeholder="Comma separated tags" bind:value={rawTags} />
         </div>
       </div>
-      <div class="field">
-        <label for="route-video" class="label">Video</label>
-        <div class="control">
-          <input id="route-video" type="text" class="input" placeholder="Video" bind:value={editingRoute.video} />
+      {#if $user.uid === "hPH5RJL1s1ZNv8rtH1gIchMcMhz1"}
+        <div class="field">
+          <label for="route-video" class="label">Video</label>
+          <div class="control">
+            <input id="route-video" type="text" class="input" placeholder="Video" bind:value={editingRoute.video} />
+          </div>
         </div>
-      </div>
+      {/if}
     </section>
     <footer class="modal-card-foot is-justify-content-flex-end">
       <button class="button" on:click={closeModal}>Cancel</button>

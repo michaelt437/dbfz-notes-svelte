@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { createEventDispatcher } from "svelte";
+  import { createEventDispatcher, onMount } from "svelte";
   import { user } from "../store";
   import { fb, auth } from "../firebase";
 
@@ -9,12 +9,25 @@
     dispatch("triggerMenu")
   }
 
-  async function login () {
-    const _user = await fb.auth().signInWithEmailAndPassword("michaeltoadbro@gmail.com", "jyp123");
-    user.update(() => {
-      return {..._user};
-    })
+  function login () {
+    const provider = new auth.GoogleAuthProvider();
+    fb.auth().signInWithRedirect(provider);
   }
+
+  function logout () {
+    fb.auth().signOut();
+    window.location.reload();
+  }
+
+  onMount(() => {
+    fb.auth().onAuthStateChanged((authUser) => {
+      if (authUser) {
+        user.update(() => {
+          return {...authUser};
+        })
+      }
+    })
+  })
 
   export let openSidebar: boolean;
 </script>

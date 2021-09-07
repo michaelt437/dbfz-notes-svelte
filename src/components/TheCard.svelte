@@ -88,7 +88,7 @@
   }
 
   .box-footer .button {
-    flex-basis: 25%;
+    flex-basis: 15%;
   }
 
   .box-footer .button {

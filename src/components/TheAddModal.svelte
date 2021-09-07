@@ -1,5 +1,6 @@
 <script lang="typescript">
 import { createEventDispatcher } from "svelte";
+import { user } from "../store";
 import { db } from "../firebase";
 import type { Combo } from "../types";
 export let openAddModal;
@@ -97,12 +98,14 @@ function addTip (): void {
           <input id="route-tags" type="text" class="input" placeholder="Comma separated tags" bind:value={rawTags} />
         </div>
       </div>
-      <div class="field">
-        <label for="route-video" class="label">Video</label>
-        <div class="control">
-          <input id="route-video" type="text" class="input" placeholder="Video" bind:value={newRoute.video} />
+      {#if $user.uid === "hPH5RJL1s1ZNv8rtH1gIchMcMhz1"}
+        <div class="field">
+          <label for="route-video" class="label">Video</label>
+          <div class="control">
+            <input id="route-video" type="text" class="input" placeholder="Video" bind:value={newRoute.video} />
+          </div>
         </div>
-      </div>
+      {/if}
     </section>
     <footer class="modal-card-foot is-justify-content-flex-end">
       <button class="button" on:click={closeModal}>Cancel</button>

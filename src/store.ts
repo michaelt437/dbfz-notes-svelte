@@ -1,9 +1,8 @@
 import { writable } from "svelte/store";
-import type { Combo, Character } from "./types";
+import type { Combo } from "./types";
 
-let character = writable<Character>({ name: "", id: "" });
-let roster = writable<Character[]>([]);
+let routes = writable<Combo[]>([]);
 let selectedCombo = writable<Combo | null>(null);
 let user = writable<any>(null);
 
-export { character, roster, selectedCombo, user };
+export { routes, selectedCombo, user };
