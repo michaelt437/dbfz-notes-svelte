@@ -118,7 +118,7 @@ function deleteTip (index: number): void {
   </div>
 </div>
 <style>
-  .modal {
+  .modal-card {
     max-height: 70%;
     max-width: 70%;
   }
