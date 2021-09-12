@@ -24,15 +24,13 @@
 <div class="box">
   <div class="box-header level mb-5">
     <h5 class="title is-5 level-left mb-0"># {combo.title}</h5>
-    <p class="level-right mb-0 is-hidden-mobile">
     {#if combo.tags}
-      <div class="tags">
+      <div class="tags level-right mb-0 is-hidden-touch">
         {#each combo.tags as tag}
-          <span class="tag is-info is-light">{tag.toLowerCase()}</span>
+          <span class="tag is-info is-light mb-0">{tag.toLowerCase()}</span>
         {/each}
       </div>
     {/if}
-    </p>
   </div>
   <div class="box-content">
     {#if combo.video}
