@@ -1,7 +1,7 @@
 <script lang="ts">
 import { onMount, createEventDispatcher } from "svelte";
 import { db } from "../firebase";
-import { character, user } from "../store";
+import { routes, user } from "../store";
 import type { Combo } from "../types";
 import Card from "./TheCard.svelte";
 import Empty from "./TheEmptyState.svelte";

@@ -59,7 +59,7 @@ function deleteTip (index: number): void {
 
 </script>
 <div class="modal" class:show={openAddModal}>
-  <div class="modal-background"></div>
+  <div class="modal-background" style="overflow: hidden;"></div>
   <div class="modal-card">
     <header class="modal-card-head">
       <p class="modal-card-title">Add Route</p>
@@ -118,10 +118,11 @@ function deleteTip (index: number): void {
   </div>
 </div>
 <style>
-  .modal-card {
-    top: 100px;
+  .modal {
+    max-height: 70%;
+    max-width: 70%;
   }
   .show {
-    display: block;
+    display: flex;
   }
 </style>

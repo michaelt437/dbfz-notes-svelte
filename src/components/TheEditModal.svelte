@@ -95,9 +95,10 @@
 </div>
 <style>
   .modal-card {
-    top: 100px;
+    max-height: 70%;
+    max-width: 70%;
   }
   .show {
-    display: block;
+    display: flex;
   }
 </style>
